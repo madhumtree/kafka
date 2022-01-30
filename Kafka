@@ -1,0 +1,16 @@
+1.start zookeeper 
+  zookeeper-server-start.bat ./config/zookeeper.properties
+2.start kafka server
+  kafka-server-start.bat ./config/server.properties
+   
+kafka-topics.bat --list --zookeeper localhost:2181 available topic will be displayed
+
+kafka-console-producer.bat --broker-list localhost:9092 --topic demotopic 
+
+kafka-console-consumer.bat --bootstrap-server  localhost:9092 --topic demotopic --from-beginning 
+
+112000
+12320
+1500
+1000
+600
